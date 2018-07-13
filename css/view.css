@@ -1,4 +1,4 @@
-body{
+body {
   margin-left: 20px;
   padding: 0;
   background-color: tomato;
@@ -7,33 +7,38 @@ body{
   font-weight: 400;
   height: 900px;
 }
-.main-nav{
+
+.main-nav {
   float: right;
   list-style: none;
-  top-margin:30px;
-
+  top-margin: 30px;
 }
-.main-nav li{
+
+.main-nav li {
   display: inline-block;
-
 }
-.main-nav li a{
+
+.main-nav li a {
   color: white;
   text-decoration: none;
   padding: 5px 20px;
   font-size: 30px;
 }
-.main-nav li.active a{
+
+.main-nav li.active a {
   border: 1px solid white;
 }
-.main-nav li a:hover{
+
+.main-nav li a:hover {
   border: 1px solid white;
 }
-.entrySection{
+
+.entrySection {
   position: relative;
   top: 100px;
 }
-.left{
+
+.left {
   position: relative;
   top: -200px;
   left: 900px;
