@@ -1,0 +1,40 @@
+body{
+  margin-left: 20px;
+  padding: 0;
+  background-color: tomato;
+  font-size: 16px;
+  color: black;
+  font-weight: 400;
+  height: 900px;
+}
+.main-nav{
+  float: right;
+  list-style: none;
+  top-margin:30px;
+
+}
+.main-nav li{
+  display: inline-block;
+
+}
+.main-nav li a{
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
+  font-size: 30px;
+}
+.main-nav li.active a{
+  border: 1px solid white;
+}
+.main-nav li a:hover{
+  border: 1px solid white;
+}
+.entrySection{
+  position: relative;
+  top: 100px;
+}
+.left{
+  position: relative;
+  top: -200px;
+  left: 900px;
+}
