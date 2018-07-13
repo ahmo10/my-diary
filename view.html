@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>My Diary</title>
-    <link type="text/css"rel="stylesheet"href="css/view.css">
+  <meta charset="UTF-8">
+  <title>My Diary</title>
+  <link type="text/css" rel="stylesheet" href="css/view.css">
 </head>
+
 <body>
-<div class="container">
-  <div class="row">
-    <ul class="main-nav">
-      <li class="active"> <a href="index.html">Home</a></li>
-      <li> <a href="view.html">Create Entry</a></li>
-      <li> <a href="login.html">Log In</a></li>
-      <li> <a href="profile.html">Profile</a></li>
-    </ul>
-  </div>
-  <section class="entrySection">
+  <div class="container">
+    <div class="row">
+      <ul class="main-nav">
+        <li class="active"> <a href="index.html">Home</a></li>
+        <li> <a href="view.html">Create Entry</a></li>
+        <li> <a href="login.html">Log In</a></li>
+        <li> <a href="profile.html">Profile</a></li>
+      </ul>
+    </div>
+    <section class="entrySection">
 
-        <h2>Edit Entry</h2>
-        <form id="entryform">
-            Title:<br>
-  <input type="text" name="Title"><br>
-  Date:<br>
-  <input type="date" name="Date"><br>
-  Text:<br>
-  <textarea name="message" rows="30" cols="97">
+      <h2>Edit Entry</h2>
+      <form id="entryform">
+        Title:<br>
+        <input type="text" name="Title"><br> Date:
+        <br>
+        <input type="date" name="Date"><br> Text:
+        <br>
+        <textarea name="message" rows="30" cols="97">
 </textarea><br>
-<input type="submit" class="submit-btn" value="Submit">
-<input type="reset" class="submit-btn">
-</form>
-</section>
-                <div class="left"
-                    <form method="post">
-                        <table id="entries-table">
-                            <thead>
-                            <th>S/NO</th>
-                            <th>TITLE</th>
-                            <th>CONTENT</th>
-                            <th>TIME</th>
-                            <th>REMINDER</th>
-                            <th>EDIT</th>
-                            <th>REMOVE</th>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Going to moringa BOOTCAMP</td>
-                                <td>I will be attending Moringa prep bootcamp for 5 weeks</td>
-                                <td>25<sup>th</sup> june, 2018</td>
-                                <td>two weeks left</td>
-                                <td><a href="#" id="edit-btn">&#9998;</a></td>
-                                <td><a href="#" id="delete-btn">&times;</a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Watching world cup 2nd runners up</td>
-                                <td>I will watching world cup belgium versus england on saturday</td>
-                                <td>14<sup>th</sup> July, 2018</td>
-                                <td>20 hours left</td>
-                                <td><a href="#" id="edit-btn">&#9998;</a></td>
-                                <td><a href="#" id="delete-btn">&times;</a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Watching world cup 2nd runners up</td>
-                                <td>I will watching world cup Belgium versus England on saturday</td>
-                                <td>14<sup>th</sup> July, 2018</td>
-                                <td>20 hours left</td>
-                                <td><a href="#" id="edit-btn">&#9998;</a></td>
-                                <td><a href="#" id="delete-btn">&times;</a></td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Watching world cup final</td>
-                                <td>I will watching world cup France versus Croatia on saturday</td>
-                                <td>14<sup>th</sup> July, 2018</td>
-                                <td>20 hours left</td>
-                                <td><a href="#" id="edit-btn">&#9998;</a></td>
-                                <td><a href="#" id="delete-btn">&times;</a></td>
-                            </tr>
+        <input type="submit" class="submit-btn" value="Submit">
+        <input type="reset" class="submit-btn">
+      </form>
+    </section>
+    <div class="left" <form method="post">
+      <table id="entries-table">
+        <thead>
+          <th>S/NO</th>
+          <th>TITLE</th>
+          <th>CONTENT</th>
+          <th>TIME</th>
+          <th>REMINDER</th>
+          <th>EDIT</th>
+          <th>REMOVE</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Going to moringa BOOTCAMP</td>
+            <td>I will be attending Moringa prep bootcamp for 5 weeks</td>
+            <td>25<sup>th</sup> june, 2018</td>
+            <td>two weeks left</td>
+            <td><a href="#" id="edit-btn">&#9998;</a></td>
+            <td><a href="#" id="delete-btn">&times;</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Watching world cup 2nd runners up</td>
+            <td>I will watching world cup belgium versus england on saturday</td>
+            <td>14<sup>th</sup> July, 2018</td>
+            <td>20 hours left</td>
+            <td><a href="#" id="edit-btn">&#9998;</a></td>
+            <td><a href="#" id="delete-btn">&times;</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Watching world cup 2nd runners up</td>
+            <td>I will watching world cup Belgium versus England on saturday</td>
+            <td>14<sup>th</sup> July, 2018</td>
+            <td>20 hours left</td>
+            <td><a href="#" id="edit-btn">&#9998;</a></td>
+            <td><a href="#" id="delete-btn">&times;</a></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Watching world cup final</td>
+            <td>I will watching world cup France versus Croatia on saturday</td>
+            <td>14<sup>th</sup> July, 2018</td>
+            <td>20 hours left</td>
+            <td><a href="#" id="edit-btn">&#9998;</a></td>
+            <td><a href="#" id="delete-btn">&times;</a></td>
+          </tr>
 
-                            </tbody>
+        </tbody>
 
-                        </table>
-                    </form>
-            </div>
-        </div>
+      </table>
+      </form>
+    </div>
+  </div>
 </body>
+
 </html>
