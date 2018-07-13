@@ -96,3 +96,9 @@ input[type="submit"]:focus{
 .google{
   background-color: #dd4b39;
 }
+span.psw {
+    float: right;
+    margin-right: 100px;
+    padding-top: 16px;
+    font-size: 20px;
+}
