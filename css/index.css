@@ -31,6 +31,28 @@ body{
 .main-nav li.active a{
   border: 1px solid white;
 }
+.main-nav li a:hover{
+  border: 1px solid white;
+}
+.logo img{
+  width: 100px;
+  height: auto;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+.captionLanding{
+  position: absolute;
+  width: 1800px;
+  margin-left: 0;
+  margin-bottom: 10px;
+
+}
+.captionLanding h2{
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
 #signUp{
   position: relative;
   top: 100px;
@@ -127,4 +149,8 @@ span.psw {
     margin-right: 100px;
     padding-top: 16px;
     font-size: 20px;
+}
+.forgot h2{
+  color: white;
+  font-size: 20px;
 }
