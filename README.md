@@ -1,7 +1,14 @@
 ## DESCRIPTION
-This is a website that allows users to have an online diary.The site helps you keep record on the go.All you need is to create an account and you are ready to go
-##AUTHOR
-By Bashir Hassan Billow
+MyDiary is an online journal where users can pen down their thoughts and feelings. 
+-Users can create an account and log in.
+-Users can view all entries to their diary.
+-Users can view the contents of a diary entry.
+-Users can add or modify an entry.
+
+
+
+## AUTHOR
+By Ahmed Ibrahim
 ## PREREQUISITES
 you require a browser preferably chrome to run this site.You will require a texteditor if your planning on editing.
 To get this project git clone to your local machine and open the file index.html with your favourite browser
