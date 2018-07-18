@@ -1,29 +1,38 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #efefef;
-  font-size: 16px;
-  color: #777;
-  font-weight: 400;
-}
 
+:root:{
+  --container-bg-color:#333;
+  --left-bg-color:rgba(223,39,39,o.7);
+  --left-buttton-hover-color:rgba(161,11,11,0.3);
+  --right-bg-color:rgba(43,43,43,0.8);
+  --right-button-hover-color:rgba(92,92,92,0.3);
+  --hover-width:75%;
+  --other-width:25%;
+  --speed:1000ms;
+}
+html,body{
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x:hidden;
+
+}
 .landingPage {
   height: 800px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/diary.jpeg");
   background-size: cover;
   opacity: 0.9;
 }
-
-.main-nav {
+.row{
+  height: 50px;
+  background-color:grey;
+}
+ul li{
   float: right;
-  list-style: none;
-  top-margin: 30px;
+  font-size: 1.6rem;
+  list-style-type: none;
+  padding: 20px;
 }
-
-.main-nav li {
-  display: inline-block;
-}
-
 .main-nav li a {
   color: white;
   text-decoration: none;
@@ -38,37 +47,132 @@ body {
 .main-nav li a:hover {
   border: 1px solid white;
 }
-
-.logo img {
-  width: 100px;
-  height: auto;
-  margin-left: 100px;
-  margin-top: 100px;
+h1{
+  font-size: 4rem;
+  color: #fff;
+  position:absolute;
+  left: 50%;
+  top:20%;
+  transform: translate(-50%);
+  white-space: nowrap;
 }
-
-.captionLanding {
+.button{
+  display: block;
   position: absolute;
-  width: 1800px;
-  margin-left: 0;
-  margin-bottom: 10px;
+  left: 50%;
+  top: 40$;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border:#fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+.split.left.button:hover{
+  background-color: rgba(161,11,11,0.3);
+   border-color: rgba(161,11,11,0.3);
+
+}
+.split.right.button:hover{
+  background-color: rgba(92,92,92,0.3);
+  border-color: rgba(92,92,92,0.3);
+
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff ;
+}
+.split{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow:hidden;
+  background-color: pink;
+}
+.split.left{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/splitleft.jpeg");
+  left: 0;
+  background-size: cover;
+}
+.split.left::before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+.split.right{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/diary.jpeg");
+  right: 0;
+  background-size: cover;
+}
+.split.right:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+
+}
+.split.left,.split.right,.split.right:before,.split.left:before{
+  transition: 1000ms all ease-in-out;
+}
+.hover-left .split.left{
+  width: 75%
+}
+.hover-left .split.right{
+  width: 25%;
+}
+.hover-left .right:before{
+  z-index:2;
+}
+.hover-right .split.right{
+  width: 75%
+}
+.hover-right .split.left{
+  width: 25%;
+}
+.hover-right .left:before{
+  z-index:2;
 }
 
-.captionLanding h2 {
+.split h2 {
+  position: relative;
+  top: 35%;
   color: white;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 100px;
 }
-
+.split h1{
+  position: relative;
+  top: 10%;
+  text-align: center;
+}
 #signUp {
   position: relative;
-  top: 100px;
-  margin: auto;
+  top: 70px;
+  left: 200px;
   height: 400px;
   width: 600px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
-
+#logIn{
+  position: absolute;
+  top: 200px;
+  right:300px
+}
+#logIn h1{
+  margin-top: -80px;
+  font-weight: 300;
+  font-size: 28px;
+  color: white;
+}
 .left-box {
   position: absolute;
   top: 0;
@@ -77,8 +181,9 @@ body {
   height: 400px;
 }
 
-h1 {
-  margin: 0 0 20px 0;
+#signUp h1 {
+  position: absolute;
+  top: -30px;
   font-weight: 300;
   font-size: 28px;
   color: white;
@@ -120,7 +225,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 .right-box {
   position: absolute;
-  top: 00;
+  top: 0;
   right: 0;
   box-sizing: border-box;
   padding: 40px;
@@ -158,7 +263,6 @@ button.social {
 }
 
 span.psw {
-  float: right;
   margin-right: 100px;
   padding-top: 16px;
   font-size: 20px;
@@ -168,7 +272,6 @@ span.psw {
   color: white;
   font-size: 20px;
 }
-
 .profile {
   margin: 0;
   padding: 0;
@@ -192,24 +295,9 @@ span.psw {
 .profile-sect img {
   width: 100%;
 }
-
-.details {
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.details h2, p {
-  color: white;
-}
-
 .totalEntries {
-  font-size: 40px;
+  font-size: 20px;
   position: relative;
-  top: 150px;
-  left: 200px;
+  top: 50px;
+  left: 100px;
 }
