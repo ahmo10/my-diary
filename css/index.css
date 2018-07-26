@@ -1,29 +1,28 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #efefef;
-  font-size: 16px;
-  color: #777;
-  font-weight: 400;
-}
 
+html,body{
+  padding: 0px;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x:hidden;
+
+}
 .landingPage {
-  height: 800px;
+  height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/diary.jpeg");
   background-size: cover;
   opacity: 0.9;
 }
-
-.main-nav {
+.row{
+  height: 50px;
+  background-color:grey;
+}
+ul li{
   float: right;
-  list-style: none;
-  top-margin: 30px;
+  font-size: 1.6rem;
+  list-style-type: none;
+  padding: 20px;
 }
-
-.main-nav li {
-  display: inline-block;
-}
-
 .main-nav li a {
   color: white;
   text-decoration: none;
@@ -38,47 +37,136 @@ body {
 .main-nav li a:hover {
   border: 1px solid white;
 }
-
-.logo img {
-  width: 100px;
-  height: auto;
-  margin-left: 100px;
-  margin-top: 100px;
+h1{
+  font-size: 4rem;
+  color: #fff;
+  position:absolute;
+  left: 50%;
+  top:20%;
+  transform: translate(-50%);
+  white-space: nowrap;
 }
-
-.captionLanding {
+.button{
+  display: block;
   position: absolute;
-  width: 1800px;
-  margin-left: 0;
-  margin-bottom: 10px;
+  left: 50%;
+  top: 40%;
+  height: 2.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border:#fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+.split.left.button:hover{
+  background-color: rgba(161,11,11,0.3);
+   border-color: rgba(161,11,11,0.3);
+
+}
+.split.right.button:hover{
+  background-color: rgba(92,92,92,0.3);
+  border-color: rgba(92,92,92,0.3);
+
+}
+.container{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #fff ;
+}
+.split{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow:hidden;
+  background-color: pink;
+}
+.split.left{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/splitleft.jpeg");
+  left: 0;
+  background-size: cover;
+}
+.split.right{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/diary.jpeg");
+  right: 0;
+  background-size: cover;
 }
 
-.captionLanding h2 {
+.split.left,.split.right,.split.right:before,.split.left:before{
+  transition: 1000ms all ease-in-out;
+}
+.hover-left .split.left{
+  width: 60%;
+}
+.hover-left .split.right{
+  width: 40%;
+}
+.hover-left .right:before{
+  z-index:2;
+}
+.hover-right .split.right{
+  width: 40%
+}
+.hover-right .split.left{
+  width: 60%;
+}
+.hover-right .left:before{
+  z-index:2;
+}
+
+.split h2 {
+  position: relative;
+  top: 35%;
   color: white;
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 100px;
 }
-
-#signUp {
+.split h1{
   position: relative;
-  top: 100px;
-  margin: auto;
+  top: 10%;
+  text-align: center;
+}
+.signUpBox {
+  position: relative;
+  top: 70px;
+  left: 30%;
   height: 400px;
   width: 600px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
-
-.left-box {
+.signUp{
   position: absolute;
-  top: 0;
-  left: 0 padding:40px;
-  width: 300px;
-  height: 400px;
+  }
+  .signUpBox h1{
+    margin-top: 20%;
+    font-weight: 300;
+    font-size: 28px;
+    color: white;
+  }
+.logInBox{
+  width: 320px;
+  height: 420px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
 }
 
-h1 {
-  margin: 0 0 20px 0;
+.logIn{
+position: absolute;
+}
+.logInBox h1{
+  margin-top: -80px;
   font-weight: 300;
   font-size: 28px;
   color: white;
@@ -120,7 +208,7 @@ input[type="submit"]:hover, input[type="submit"]:focus {
 
 .right-box {
   position: absolute;
-  top: 00;
+  top: 0;
   right: 0;
   box-sizing: border-box;
   padding: 40px;
@@ -149,26 +237,11 @@ button.social {
   cursor: pointer;
 }
 
-.facebook {
-  background-color: #32508e;
-}
-
-.google {
-  background-color: #dd4b39;
-}
-
 span.psw {
-  float: right;
   margin-right: 100px;
   padding-top: 16px;
   font-size: 20px;
 }
-
-.forgot h2 {
-  color: white;
-  font-size: 20px;
-}
-
 .profile {
   margin: 0;
   padding: 0;
@@ -192,24 +265,9 @@ span.psw {
 .profile-sect img {
   width: 100%;
 }
-
-.details {
-  height: 50%;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.details h2, p {
-  color: white;
-}
-
 .totalEntries {
-  font-size: 40px;
+  font-size: 20px;
   position: relative;
-  top: 150px;
-  left: 200px;
+  top: 50px;
+  left: 100px;
 }
